@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work | Projects by River Waves Solutions</title>
+
+  <meta name="description" content="Explore real client projects by River Waves Solutions, including custom chat apps, AI tools, and full-stack web solutions. See how we blend creativity with code to bring powerful digital products to life." />
+  
+  <meta name="keywords" content="River Waves projects, software house portfolio, chat app project, AI generator, web development case studies, Pakistan tech agency, real client work" />
+  
+  <meta name="author" content="River Waves Solutions" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chatapp-river-waves.vercel.app/projects.html" />
+  <meta property="og:title" content="Our Projects | River Waves Solutions Portfolio" />
+  <meta property="og:description" content="Check out the innovative projects we've completed — from AI image generation to scalable real-time chat apps and full-stack SaaS systems." />
+  <meta property="og:image" content="https://chatapp-river-waves.vercel.app/assets/og-banner.jpg" />
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Our Projects | River Waves Solutions Portfolio" />
+  <meta name="twitter:description" content="Browse our featured work: real-world applications designed and developed by River Waves, a leading software team in Faisalabad." />
+  <meta name="twitter:image" content="https://chatapp-river-waves.vercel.app/assets/og-banner.jpg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://chatapp-river-waves.vercel.app/projects.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><img src="assets/logo.png" alt="logo"></div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">Faq</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="projects-hero">
+    <h1>Our Work</h1>
+    <p>Each project is a wave of innovation.</p>
+    <div class="wave-container">
+    <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+        <path fill="#0f0f0f" fill-opacity="1" 
+            d="M0,96L80,106.7C160,117,320,139,480,133.3C640,128,800,96,960,85.3C1120,75,1280,85,1360,90.7L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+        </path>
+    </svg>
+
+    </div>
+    </section>
+
+    <section class="filter-buttons">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="web">Web</button>
+        <button data-filter="mobile">Mobile</button>
+        <button data-filter="design">UI/UX</button>
+        <button data-filter="seo">SEO</button>
+    </section>
+
+  <section class="projects-container">
+    <!-- Example Card -->
+    <div class="project-card" data-category="web design seo">
+      <img src="assets/project1.svg" alt="Project 1" />
+      <div class="card-content">
+        <h3>ZyncChat</h3>
+        <p>A sleek, real-time chat app inspired by WhatsApp — built with Flutter and Socket.IO for ultra-smooth messaging.</p>
+        <p class="description">Built from scratch, ZyncChat delivers a fast, mobile-friendly experience with online status, avatar syncing, typing indicators, and persistent messaging. Uses Flutter for cross-platform UI and Node.js + MongoDB backend with WebSockets for real-time communication.</p>
+        <div class="tags"><span>MERN</span><span>Socket.IO</span><span>Node.js</span><span>MongoDB</span></div>
+        <a href="#" class="btn">View Live</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="mobile design web">
+      <img src="assets/project2.svg" alt="Project 2" />
+      <div class="card-content">
+        <h3>SynthAI</h3>
+        <p>Text-to-image web app powered by AI — generate stunning visuals from a simple prompt. Built for speed, with a sleek interface.</p>
+        <p class="description">SynthAI turns your ideas into visuals. Just type a prompt, and boom — AI-generated artwork appears. Integrated with a third-party AI API, styled with a responsive UI and smooth prompt handling. Lightweight, fast, and fun to use.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span></div>
+        <a href="#" class="btn">View Live</a>
+      </div>
+    </div>
+
+    <!-- Add more project cards here -->
+  </section>
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Build What’s Next?</h2>
+    <p>From real-time chat platforms to AI-powered tools, we've already started shaping the future — one project at a time. Yours could be next.</p>
+    <a href="contact.html" class="btn">Get in Touch</a>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 River Waves Solutions — Crafted with vision in Faisalabad, PK</p>
+    <div>
+      <a href="https://pk.linkedin.com/company/river-waves-solutions">LinkedIn</a>
+    </div>
+  </footer>
+  <script>
+    const filterButtons = document.querySelectorAll(".filter-buttons button");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(button => {
+    console.log("hello ")
+    button.addEventListener("click", () => {
+        document.querySelector(".filter-buttons button.active")?.classList.remove("active");
+        button.classList.add("active");
+
+        const filter = button.getAttribute("data-filter");
+
+        projectCards.forEach(card => {
+        const categories = card.getAttribute("data-category").split(" ");
+        if (filter === "all" || categories.includes(filter)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+        });
+    });
+    });
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target); // Animate once
+        }
+    });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.project-card, .filter-buttons').forEach((block, index) => {
+    block.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(block); 
+    });
+
+  </script>
+    <script src="js/hamburger.js"></script>
+
+</body>
+</html>
