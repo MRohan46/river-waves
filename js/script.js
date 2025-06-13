@@ -180,7 +180,6 @@ const filterButtons = document.querySelectorAll(".filter-buttons button");
 const projectCards = document.querySelectorAll(".project-card");
 
 filterButtons.forEach(button => {
-  console.log("hello ")
   button.addEventListener("click", () => {
     document.querySelector(".filter-buttons button.active")?.classList.remove("active");
     button.classList.add("active");
